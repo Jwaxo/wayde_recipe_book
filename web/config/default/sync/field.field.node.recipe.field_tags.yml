@@ -1,0 +1,29 @@
+uuid: d71d9569-59cb-4472-802a-b4129c5da3f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tags
+    - node.type.recipe
+    - taxonomy.vocabulary.tags
+id: node.recipe.field_tags
+field_name: field_tags
+entity_type: node
+bundle: recipe
+label: Tags
+description: 'Enter general tags to help categorize this recipe. You can enter a comma-separated list. For example: spicy, no bake, "this soup is amazing"'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tags: tags
+    sort:
+      field: _none
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

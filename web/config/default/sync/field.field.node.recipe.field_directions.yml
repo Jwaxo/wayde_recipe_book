@@ -1,0 +1,24 @@
+uuid: 07cd0889-2f9e-4e1e-9b83-f7e990341a1c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_directions
+    - filter.format.full_html
+    - node.type.recipe
+  module:
+    - text
+id: node.recipe.field_directions
+field_name: field_directions
+entity_type: node
+bundle: recipe
+label: Directions
+description: 'Enter the directions for this recipe. Generally these are a numbered list, starting at 1. and so forth, with each step stating an action the cook should take: "<em>Place</em> the carrots on top of the cake," or "<em>Dice</em> potatoes," etc.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

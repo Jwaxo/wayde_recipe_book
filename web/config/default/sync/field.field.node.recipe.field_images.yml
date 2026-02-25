@@ -1,0 +1,29 @@
+uuid: a15b5ed9-6cea-4884-8f00-8a36beb0c36d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_images
+    - media.type.image
+    - node.type.recipe
+id: node.recipe.field_images
+field_name: field_images
+entity_type: node
+bundle: recipe
+label: Images
+description: 'Upload one or more images of the completed product.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

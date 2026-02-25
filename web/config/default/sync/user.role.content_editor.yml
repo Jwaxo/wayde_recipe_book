@@ -5,6 +5,7 @@ dependencies:
   config:
     - node.type.article
     - node.type.page
+    - node.type.recipe
     - taxonomy.vocabulary.tags
   module:
     - comment
@@ -32,6 +33,7 @@ permissions:
   - 'create page content'
   - 'create terms in tags'
   - 'create url aliases'
+  - 'delete any recipe content'
   - 'delete article revisions'
   - 'delete own article content'
   - 'delete own files'

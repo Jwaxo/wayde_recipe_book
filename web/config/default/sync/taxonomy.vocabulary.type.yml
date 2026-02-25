@@ -1,0 +1,9 @@
+uuid: 55e58a42-37ff-410c-a834-a3f47d7737c2
+langcode: en
+status: true
+dependencies: {  }
+name: Type
+vid: type
+description: 'The suggested meal type of a recipe.'
+weight: 0
+new_revision: false

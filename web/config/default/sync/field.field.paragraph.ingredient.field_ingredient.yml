@@ -1,0 +1,29 @@
+uuid: 8f4f1840-7b26-4265-a953-e3e3a2ec8662
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ingredient
+    - paragraphs.paragraphs_type.ingredient
+    - taxonomy.vocabulary.ingredients
+id: paragraph.ingredient.field_ingredient
+field_name: field_ingredient
+entity_type: paragraph
+bundle: ingredient
+label: Ingredient
+description: "Select the ingredient from our existing ingredients library, or enter a new one to have it added to the library.\r\n<b>Note:</b> Please be careful of your spelling and capitalization, as we don't want to get duplicates in the ingredients library! For example, enter \"Flour\" instead of \"flour\"."
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      ingredients: ingredients
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

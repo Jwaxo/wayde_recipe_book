@@ -4,13 +4,18 @@ status: true
 dependencies:
   config:
     - filter.format.basic_html
+    - node.type.recipe
+    - taxonomy.vocabulary.ingredients
   module:
     - comment
     - file
     - filter
+    - media
+    - node
     - search
     - shortcut
     - system
+    - taxonomy
 _core:
   default_config_hash: hcfESiA8tr3D1muRk2KF7tbcun16ZJlG1R5SzKGed6g
 id: authenticated
@@ -21,8 +26,22 @@ permissions:
   - 'access comments'
   - 'access content'
   - 'access shortcuts'
+  - 'create recipe content'
+  - 'create terms in ingredients'
   - 'delete own files'
+  - 'delete own recipe content'
+  - 'delete recipe revisions'
+  - 'delete term revisions in ingredients'
+  - 'delete terms in ingredients'
+  - 'edit any recipe content'
+  - 'edit own recipe content'
+  - 'edit terms in ingredients'
   - 'post comments'
+  - 'revert recipe revisions'
+  - 'revert term revisions in ingredients'
   - 'search content'
   - 'skip comment approval'
   - 'use text format basic_html'
+  - 'view media'
+  - 'view recipe revisions'
+  - 'view term revisions in ingredients'

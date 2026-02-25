@@ -1,0 +1,30 @@
+uuid: 11116b46-e063-4fee-8348-eb0df717edf2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ingredient.field_amount
+    - field.field.paragraph.ingredient.field_ingredient
+    - paragraphs.paragraphs_type.ingredient
+id: paragraph.ingredient.default
+targetEntityType: paragraph
+bundle: ingredient
+mode: default
+content:
+  field_amount:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_ingredient:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

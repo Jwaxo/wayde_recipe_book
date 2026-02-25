@@ -1,0 +1,137 @@
+uuid: ccd0314b-b3df-4b5f-b6fb-c9a7a54ca42b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.recipe.body
+    - field.field.node.recipe.field_directions
+    - field.field.node.recipe.field_images
+    - field.field.node.recipe.field_ingredients
+    - field.field.node.recipe.field_recipe_type
+    - field.field.node.recipe.field_tags
+    - node.type.recipe
+  module:
+    - entity_reference_revisions
+    - layout_builder
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          77aeb277-bfb8-4084-8239-376967a60863:
+            uuid: 77aeb277-bfb8-4084-8239-376967a60863
+            region: content
+            configuration:
+              id: 'field_block:node:recipe:field_images'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_entity_view
+                label: above
+                settings:
+                  view_mode: default
+                  link: false
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          913a6956-c307-446b-82e3-60f9d34b3d57:
+            uuid: 913a6956-c307-446b-82e3-60f9d34b3d57
+            region: content
+            configuration:
+              id: 'field_block:node:recipe:field_recipe_type'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          cf936885-5d6c-4f51-8845-02d92dca7923:
+            uuid: cf936885-5d6c-4f51-8845-02d92dca7923
+            region: content
+            configuration:
+              id: 'field_block:node:recipe:field_tags'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          d97e1dcd-ed2a-4f61-9de6-3b29424d8871:
+            uuid: d97e1dcd-ed2a-4f61-9de6-3b29424d8871
+            region: content
+            configuration:
+              id: 'field_block:node:recipe:body'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+          2f620206-bb94-432a-9920-0cfab19ae841:
+            uuid: 2f620206-bb94-432a-9920-0cfab19ae841
+            region: content
+            configuration:
+              id: 'field_block:node:recipe:field_ingredients'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_revisions_entity_view
+                label: above
+                settings:
+                  view_mode: default
+                  link: ''
+                third_party_settings: {  }
+            weight: 4
+            additional: {  }
+          80da899d-af9b-49a4-84c5-e6a140b76bbc:
+            uuid: 80da899d-af9b-49a4-84c5-e6a140b76bbc
+            region: content
+            configuration:
+              id: 'field_block:node:recipe:field_directions'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 5
+            additional: {  }
+        third_party_settings: {  }
+id: node.recipe.default
+targetEntityType: node
+bundle: recipe
+mode: default
+content: {  }
+hidden:
+  links: true
+  field_images: true
+  field_recipe_type: true
+  field_tags: true
+  body: true
+  field_ingredients: true
+  field_directions: true

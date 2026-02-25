@@ -1,0 +1,9 @@
+uuid: 3d0f2469-3d54-4651-99f9-2da1b71057a4
+langcode: en
+status: true
+dependencies: {  }
+name: Ingredients
+vid: ingredients
+description: 'All possible ingredients a recipe can have.'
+weight: 0
+new_revision: false

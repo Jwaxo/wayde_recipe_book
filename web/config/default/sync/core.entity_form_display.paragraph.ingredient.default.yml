@@ -1,0 +1,34 @@
+uuid: ae319195-d0ff-41e5-b47c-7f48c54c96de
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ingredient.field_amount
+    - field.field.paragraph.ingredient.field_ingredient
+    - paragraphs.paragraphs_type.ingredient
+id: paragraph.ingredient.default
+targetEntityType: paragraph
+bundle: ingredient
+mode: default
+content:
+  field_amount:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_ingredient:
+    type: entity_reference_autocomplete
+    weight: 0
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

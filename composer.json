@@ -23,6 +23,7 @@
         "drupal/core-project-message": "^11.3",
         "drupal/core-recommended": "^11.3",
         "drupal/core-vendor-hardening": "^10.1",
+        "drupal/paragraphs": "^1.20",
         "drupal/pathauto": "^1.12",
         "drush/drush": "^13"
     },

@@ -16,11 +16,15 @@
     ],
     "require": {
         "composer/installers": "^2.3",
+        "drupal/admin_toolbar": "^3.4",
+        "drupal/admin_toolbar_tools": "^3.4",
+        "drupal/blazy": "^3.0.13",
         "drupal/core-composer-scaffold": "^11.3",
         "drupal/core-project-message": "^11.3",
-        "drupal/core-recipe-unpack": "^11.3",
         "drupal/core-recommended": "^11.3",
-        "drush/drush": "^13.7"
+        "drupal/core-vendor-hardening": "^10.1",
+        "drupal/pathauto": "^1.12",
+        "drush/drush": "^13"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -29,14 +33,13 @@
     "prefer-stable": true,
     "config": {
         "allow-plugins": {
-            "composer/installers": true,
-            "drupal/core-composer-scaffold": true,
-            "drupal/core-recipe-unpack": true,
-            "drupal/core-project-message": true,
-            "phpstan/extension-installer": true,
-            "dealerdirect/phpcodesniffer-composer-installer": true,
-            "php-http/discovery": true,
-            "php-tuf/composer-integration": true
+          "composer/installers": true,
+          "drupal/core-composer-scaffold": true,
+          "drupal/core-project-message": true,
+          "drupal/core-vendor-hardening": true,
+          "phpstan/extension-installer": true,
+          "dealerdirect/phpcodesniffer-composer-installer": true,
+          "cweagans/composer-patches": true
         },
         "sort-packages": true
     },

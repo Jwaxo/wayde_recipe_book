@@ -1,0 +1,22 @@
+uuid: 83ed9667-820e-41e0-8ff3-190fb6fe880f
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - wayde_recipes
+_core:
+  default_config_hash: VhBzWb7lMRtIOg9G7VSw_0uopi-7zXeHq4vXqqV1HFE
+id: wayde_recipes_breadcrumbs
+theme: wayde_recipes
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

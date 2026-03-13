@@ -1,0 +1,43 @@
+{
+  "name": "wayde_recipes",
+  "version": "1.0.0",
+  "description": "The Node necessities for the Waxo Gray Drupal theme",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build",
+    "dev": "gulp dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jwaxo/jwayde-portfolio.git"
+  },
+  "keywords": [
+    "drupal",
+    "theme",
+    "waxo",
+    "gray"
+  ],
+  "author": "Jessica Wayde <jessica@jesswayde.com> (http://jesswayde.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jwaxo/jwayde-portfolio/issues"
+  },
+  "homepage": "jesswayde.com",
+  "browserslist": [
+    "defaults"
+  ],
+  "dependencies": {
+    "autoprefixer": "^10.2.5",
+    "gulp": "^4.0.0",
+    "gulp-load-plugins": "^1.6.0",
+    "gulp-postcss": "^9.0.0",
+    "jquery": "^3.4.1",
+    "motion-ui": "^2.0.3",
+    "postcss": "^8.2.14"
+  },
+  "devDependencies": {
+    "gulp-sass": "^6.0.1",
+    "sass": "^1.98.0"
+  }
+}

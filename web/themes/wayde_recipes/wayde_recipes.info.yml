@@ -1,0 +1,30 @@
+name: Wayde Recipes
+type: theme
+description: 'A Jess Wayde custom theme for use with a handy online recipe book.'
+package: Core
+# version: VERSION
+core_version_requirement: ^10 || ^11
+base theme: false
+
+ckeditor_stylesheets:
+  - css/ckeditor/elements.css
+libraries:
+  - wayde_recipes/core
+regions:
+  header: Header
+  primary_menu: 'Primary menu'
+  secondary_menu: 'Secondary menu'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+  highlighted: Highlighted
+  featured_top: 'Featured top'
+  breadcrumb: Breadcrumb
+  content: Content
+  footer_first: 'Footer first'
+  footer_second: 'Footer second'
+  disabled: Disabled
+
+# Information added by Drupal.org packaging script on 2021-01-20
+version: '8.9.13'
+project: 'drupal'
+datestamp: 1611162326

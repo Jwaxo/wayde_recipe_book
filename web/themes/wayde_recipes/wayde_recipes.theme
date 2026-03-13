@@ -1,0 +1,105 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the Wayde Recipes theme.
+ */
+
+use \Drupal\Component\Utility\Html;
+use \Drupal\file\Entity\File;
+use \Drupal\Core\Url;
+
+/**
+ * Implements hook_theme_suggestions_field_alter().
+ */
+function wayde_recipes_theme_suggestions_field_alter(array &$suggestions, array $variables) {
+  $element = $variables['element'];
+  $view_mode = $element['#view_mode'];
+  if (strpos($view_mode, 'layout_builder') > -1) {
+    // We're in a Layout Builder component, which currently only is used for
+    // fields on a full view node.
+    $view_mode = 'full';
+  }
+
+  $suggestions[] = 'field__' . $view_mode;
+  $suggestions[] = 'field__' . $view_mode . '__' . $element['#field_name'];
+  if (isset($element['#bundle'])) {
+    $suggestions[] = 'field__' . $view_mode . '__' . $element['#field_name'] . '__' . $element['#bundle'];
+  }
+}
+
+/**
+ * Implements template_preprocess_page().
+ */
+function wayde_recipes_preprocess_page(&$variables) {
+
+}
+
+/**
+ * Implements template_preprocess_node().
+ */
+function wayde_recipes_preprocess_node(&$variables) {
+  $node = $variables['elements']['#node'];
+  $bundle = $node->getType();
+
+  $variables['attributes']['class'][] = 'node--' . $bundle;
+  $variables['attributes']['class'][] = 'node--' . $variables['elements']['#view_mode'];
+  $variables['attributes']['class'][] = 'node--' . $bundle . '--' . $variables['elements']['#view_mode'];
+}
+
+/**
+ * Implements template_preprocess_media().
+ */
+function wayde_recipes_preprocess_media(&$variables) {
+  $variables['caption'] = $variables['media']->get('field_media_image')->first()->alt;
+}
+
+/**
+ * Implements template_preprocess_block().
+ */
+function wayde_recipes_preprocess_block(&$variables) {
+  // Give the block an ID so we can link directly to it.
+  if (!isset($variables['title_attributes']['id'])) {
+    if (isset($variables['content'][0]['#title'])) {
+      $variables['title_attributes']['id'] = Html::cleanCSSIdentifier($variables['content'][0]['#title']);
+    }
+    elseif (isset($variables['content']['#display_id'])) {
+      $variables['title_attributes']['id'] = $variables['content']['#display_id'];
+    }
+  }
+}
+
+/**
+ * Implements template_preprocess_field().
+ */
+function wayde_recipes_preprocess_field(&$variables) {
+  $field_name = $variables['element']['#field_name'];
+  $formatter = $variables['element']['#formatter'];
+  $bundle = $variables['element']['#bundle'];
+  $entity = $variables['element']['#object'];
+
+  switch ($field_name) {
+    case "title":
+
+      break;
+
+  }
+}
+
+/**
+ * Take a media field and return a simple array of the image URL and ALT.
+ */
+function _wayde_recipes_get_image_from_media($media_field) {
+  $image = [];
+
+  $media_entity = $media_field->entity;
+  $file = File::load($media_entity->field_media_image->target_id);
+
+  $image['url'] = \Drupal::service('file_url_generator')->generate($file->getFileUri());
+
+  if (isset($image['url'])) {
+    $image['alt'] = $media_entity->alt;
+  }
+
+  return $image;
+}

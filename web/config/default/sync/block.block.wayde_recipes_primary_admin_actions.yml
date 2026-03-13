@@ -1,0 +1,20 @@
+uuid: 08f187df-9275-4341-8a21-733bcf18f321
+langcode: en
+status: true
+dependencies:
+  theme:
+    - wayde_recipes
+_core:
+  default_config_hash: Q9_2whdOj1YIomfvsIfopROW4FT_X5pY0DjdOiOaQ5U
+id: wayde_recipes_primary_admin_actions
+theme: wayde_recipes
+region: highlighted
+weight: -5
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

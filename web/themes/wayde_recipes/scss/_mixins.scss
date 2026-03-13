@@ -1,0 +1,54 @@
+/**
+ * SASS mixins for utility and styles.
+ */
+
+/**
+ * Expected to be added to ul or ol elements, to conform their list items to
+ * tabs.
+ */
+@mixin tabs {
+  border-bottom: palette($tabs, border, color) palette($tabs, border, width) solid;
+
+  li {
+    background-color: palette($tabs, background, default);
+    border: palette($tabs, border, color) palette($tabs, border, width) solid;
+    bottom: 0 - palette($tabs, border, width);
+    display: inline-block;
+    margin: palette($tabs, tab, margin);
+    padding: palette($tabs, tab, padding);
+    position: relative;
+    &:hover {
+      background-color: palette($tabs, background, hover);
+    }
+
+    a {
+      color: palette($tabs, link, inactive);
+      text-decoration: none;
+      &.is-active {
+        color: palette($tabs, link, active);
+      }
+    }
+
+    &.is-active {
+      border-bottom-width: 0;
+      padding-bottom: palette($tabs, tab, padding) + palette($tabs, border, width);
+      &:hover {
+        background-color: palette($tabs, background, default);
+      }
+    }
+  }
+}
+
+// Responsive sizes here.
+
+@mixin size-mobile {
+  @media (min-width: #{map-get($widths, mobile)}) {
+    @content;
+  }
+}
+
+@mixin size-desktop {
+  @media (min-width: #{map-get($widths, desktop)}) {
+    @content;
+  }
+}

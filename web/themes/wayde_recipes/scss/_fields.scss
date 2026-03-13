@@ -1,0 +1,50 @@
+/**
+ * Drupal field and field component styling.
+ */
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include size-desktop() {
+    min-height: map-get($heights, hero);
+  }
+}
+
+.hero-inner {
+  color: palette($colors, gray, light);
+  text-align: center;
+  z-index: 1;
+}
+
+.hero-title {
+  font-size: map-get($font-size, enormous);
+  margin: 1rem 0;
+}
+
+.hero-image {
+  background-attachment: fixed;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: -999;
+}
+
+.footer-image {
+  background-attachment: fixed;
+  position: relative;
+  height: map-get($heights, footer-image);
+  &:before {
+    background: linear-gradient(palette($layout-colors, main, bg), rgba(0,0,0,0));
+    content: '';
+    display: block;
+    height: map-get($heights, footer-image);
+    width: 100%;
+    z-index: 10;
+  }
+
+}

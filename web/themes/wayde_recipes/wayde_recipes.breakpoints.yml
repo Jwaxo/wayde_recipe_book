@@ -1,0 +1,18 @@
+wayde_recipes.mobile:
+  label: mobile
+  mediaQuery: ''
+  weight: 0
+  multipliers:
+    - 1x
+wayde_recipes.narrow:
+  label: narrow
+  mediaQuery: 'all and (min-width: 480px) and (max-width: 779px)'
+  weight: 1
+  multipliers:
+    - 1x
+bartik.wide:
+  label: wide
+  mediaQuery: 'all and (min-width: 780px)'
+  weight: 2
+  multipliers:
+    - 1x

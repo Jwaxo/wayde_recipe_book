@@ -1,0 +1,32 @@
+{#
+/**
+ * @file
+ * Template for a generic layout.
+ */
+#}
+{%
+  set classes = classes|default([])|merge([
+    'layout',
+    'layout--' ~ layout.id|clean_class,
+    'container-breakout',
+  ])
+%}
+{% if content %}
+  <div{{ attributes.addClass(classes) }}>
+
+    <div class="container layout-content">
+      {% block content %}
+
+        {% for region in layout.getRegionNames %}
+          {% if content[region] %}
+            <div {{ region_attributes[region].addClass('layout__region', 'layout__region--' ~ region|clean_class) }}>
+              {{ content[region] }}
+            </div>
+          {% endif %}
+        {% endfor %}
+
+      {% endblock %}
+    </div>
+
+  </div>
+{% endif %}

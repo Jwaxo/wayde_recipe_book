@@ -1,0 +1,5 @@
+node_modules
+
+# We don't ignore the css output of the sass files because we're committing the
+# full css to the repo, mostly for my own sanity. Makes it very easy to push up
+# changes without needing a full CI.

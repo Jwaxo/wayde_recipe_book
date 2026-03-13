@@ -1,0 +1,67 @@
+/**
+ * Styles defining basic layout, including Layout Builder specs.
+ */
+
+header {
+  background-color: palette($layout-colors, header, bg);
+
+  &.header--page {
+    background-color: transparent;
+  }
+}
+
+main {
+  min-height: 100vh; // Quick solution to make the footer stick to bottom.
+  overflow-x: hidden;
+}
+
+footer {
+  background-color: palette($layout-colors, footer, bg);
+  color: palette($colors, white, true);
+  overflow: hidden;
+
+  > .container {
+    @include size-desktop() {
+      display: flex;
+    }
+  }
+  .region {
+    flex: 1 1 50%;
+    &:last-child {
+      @include size-desktop() {
+        text-align: right;
+      }
+    }
+  }
+
+  .block {
+    margin: 20px;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  max-width: map_get($widths, desktop);
+}
+
+.container-breakout {
+  left: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  overflow: hidden;
+  position: relative;
+  right: 50%;
+  width: 100vw;
+}
+
+.layout {
+  background-color: palette($layout-colors, main, bg);
+}
+
+.layout-content {
+  padding: 0 $main-gutter;
+}
+
+.layout__region {
+  padding: $main-gutter 0;
+}

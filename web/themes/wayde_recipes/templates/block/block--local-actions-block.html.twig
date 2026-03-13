@@ -1,0 +1,14 @@
+{% extends "block.html.twig" %}
+{#
+/**
+ * @file
+ * Theme override for local actions (primary admin actions.)
+ */
+#}
+<div class="layout-content">
+  {% block content %}
+    {% if content %}
+      <nav>{{ content }}</nav>
+    {% endif %}
+  {% endblock %}
+</div>

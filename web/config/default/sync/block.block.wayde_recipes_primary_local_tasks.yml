@@ -1,0 +1,22 @@
+uuid: a2008f03-ccc0-488c-b951-4208d2b4c898
+langcode: en
+status: true
+dependencies:
+  theme:
+    - wayde_recipes
+_core:
+  default_config_hash: nGE3EoPQQaQCuqTUtZgw0-KIzmrqdKDzdNQf2JyPUt4
+id: wayde_recipes_primary_local_tasks
+theme: wayde_recipes
+region: highlighted
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

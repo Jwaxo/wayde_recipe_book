@@ -1,0 +1,82 @@
+/**
+ * Theme-wide settings.
+ */
+
+$widths: (
+  desktop: 1080px,
+  mobile: 760px,
+);
+$main-gutter: 20px;
+
+$heights: (
+  hero: 600px,
+  footer-image: 400px,
+);
+
+$font-size: (
+  small: 12px,
+  regular: 16px,
+  big: 20px,
+  huge: 30px,
+  giant: 40px,
+  billboard: 60px,
+  enormous: 84px,
+);
+
+$body-font: $nobile-normal;
+$headline-font: $lato-normal;
+
+$colors: (
+  white: (
+    true: #fff,
+  ),
+  gray: (
+    light: #ddd,
+    medium: #b6b6b6,
+    medium-dark: #666,
+    dark: #222,
+  ),
+  blue: (
+    light: #6699ff,
+    medium: #3366cc,
+    dark: #003399,
+  ),
+  green: (
+    light: #99cc99,
+    medium: #669966,
+  ),
+  black: (
+    true: #000,
+  ),
+);
+
+$layout-colors: (
+  header: (
+    bg: palette($colors, gray, medium)
+  ),
+  main: (
+    bg: palette($colors, gray, light),
+  ),
+  footer: (
+    bg: palette($colors, gray, dark),
+  ),
+);
+
+$tabs: (
+  tab: (
+    padding: 5px,
+    margin: 0 5px,
+  ),
+  background: (
+    default: palette($colors, gray, light),
+    hover: palette($colors, gray, medium),
+  ),
+  border: (
+    color: palette($colors, gray, dark),
+    width: 1px,
+  ),
+  link: (
+    active: palette($colors, gray, dark),
+    inactive: palette($colors, blue, medium),
+  ),
+);

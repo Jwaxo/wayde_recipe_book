@@ -1,0 +1,68 @@
+/**
+ * Basic element styling.
+ */
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+body {
+  background: transparent;
+  margin: 0;
+}
+
+/**
+ * Make sure all of this only happens after admin toolbars and such.
+ */
+.layout-container {
+  font-family: $body-font;
+  font-weight: 400;
+  overflow-x: hidden;
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: $headline-font;
+    font-weight: 500;
+
+    strong {
+      font-weight: 800;
+    }
+  }
+
+  h1 {
+    font-size: map-get($font-size, billboard);
+  }
+
+  h2 {
+    font-size: map-get($font-size, giant);
+  }
+
+  strong {
+    font-weight: 700;
+  }
+
+  a,
+  a:visited,
+  a:active {
+    color: palette($colors, green, medium);
+
+    &:hover {
+      color: palette($colors, green, light);
+    }
+  }
+
+  dt, dd {
+    display: inline-block;
+  }
+
+  dt {
+    font-weight: bold;
+    &:after {
+      content: ': '
+    }
+  }
+
+  dd {
+    margin-left: 0;
+  }
+}

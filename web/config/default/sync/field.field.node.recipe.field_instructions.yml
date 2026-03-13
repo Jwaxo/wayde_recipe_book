@@ -1,0 +1,34 @@
+uuid: 0087d8ee-f537-4919-af0b-23309ae95435
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_instructions
+    - node.type.recipe
+    - paragraphs.paragraphs_type.instruction
+  module:
+    - entity_reference_revisions
+id: node.recipe.field_instructions
+field_name: field_instructions
+entity_type: node
+bundle: recipe
+label: Instructions
+description: 'Add individual steps for your directions, turning them into Instructions. This is easier for us to format and has more options versus the Text Directions field.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      instruction: instruction
+    negate: 0
+    target_bundles_drag_drop:
+      ingredient:
+        weight: 3
+        enabled: false
+      instruction:
+        weight: 4
+        enabled: true
+field_type: entity_reference_revisions

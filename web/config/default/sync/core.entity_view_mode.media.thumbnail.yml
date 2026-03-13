@@ -1,0 +1,11 @@
+uuid: b79638f0-ee35-45db-bd0e-e3487ce9621d
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.thumbnail
+label: Thumbnail
+description: null
+targetEntityType: media
+cache: true

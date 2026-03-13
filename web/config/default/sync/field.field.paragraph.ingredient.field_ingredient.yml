@@ -11,8 +11,8 @@ field_name: field_ingredient
 entity_type: paragraph
 bundle: ingredient
 label: Ingredient
-description: "Select the ingredient from our existing ingredients library, or enter a new one to have it added to the library.\r\n<b>Note:</b> Please be careful of your spelling and capitalization, as we don't want to get duplicates in the ingredients library! For example, enter \"Flour\" instead of \"flour\"."
-required: false
+description: "Select the ingredient from our existing ingredients library, or enter a new one to have it added to the library.<br />\r\n<b>Note:</b> If there are multiple options for this ingredient (eg. sub pork with chicken) enter more than one ingredient in this field.<br />\r\n<b>Note:</b> Please be careful of your spelling and capitalization, as we don't want to get duplicates in the ingredients library! For example, enter \"Flour\" instead of \"flour\"."
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''

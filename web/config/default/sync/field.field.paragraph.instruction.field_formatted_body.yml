@@ -1,0 +1,24 @@
+uuid: b907090f-e288-4cbf-98f1-04bfd0d60e6a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_formatted_body
+    - filter.format.restricted_html
+    - paragraphs.paragraphs_type.instruction
+  module:
+    - text
+id: paragraph.instruction.field_formatted_body
+field_name: field_formatted_body
+entity_type: paragraph
+bundle: instruction
+label: Body
+description: 'Enter the directions that this instruction contains. Each Instruction is, ideally, a single, self-contained step in the recipe.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - restricted_html
+field_type: text_long

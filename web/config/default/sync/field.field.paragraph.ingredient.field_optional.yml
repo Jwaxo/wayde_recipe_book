@@ -1,0 +1,21 @@
+uuid: 7f65c42c-3919-4a5c-a7af-ddb17fb39de4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_optional
+    - paragraphs.paragraphs_type.ingredient
+id: paragraph.ingredient.field_optional
+field_name: field_optional
+entity_type: paragraph
+bundle: ingredient
+label: Optional
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

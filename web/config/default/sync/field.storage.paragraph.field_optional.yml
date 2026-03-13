@@ -1,19 +1,17 @@
-uuid: cc00be11-73d5-48ce-acfe-6f3aa060da7b
+uuid: d80ba995-ec70-403f-8d80-512fe6411d07
 langcode: en
 status: true
 dependencies:
   module:
     - paragraphs
-    - taxonomy
-id: paragraph.field_ingredient
-field_name: field_ingredient
+id: paragraph.field_optional
+field_name: field_optional
 entity_type: paragraph
-type: entity_reference
-settings:
-  target_type: taxonomy_term
+type: boolean
+settings: {  }
 module: core
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.recipe.field_directions
     - field.field.node.recipe.field_images
     - field.field.node.recipe.field_ingredients
+    - field.field.node.recipe.field_instructions
     - field.field.node.recipe.field_recipe_type
     - field.field.node.recipe.field_tags
     - node.type.recipe
@@ -181,6 +182,7 @@ hidden:
   field_directions: true
   field_images: true
   field_ingredients: true
+  field_instructions: true
   field_recipe_type: true
   field_tags: true
   links: true

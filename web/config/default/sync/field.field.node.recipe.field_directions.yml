@@ -12,8 +12,8 @@ id: node.recipe.field_directions
 field_name: field_directions
 entity_type: node
 bundle: recipe
-label: Directions
-description: 'Enter the directions for this recipe. Generally these are a numbered list, starting at 1. and so forth, with each step stating an action the cook should take: "<em>Place</em> the carrots on top of the cake," or "<em>Dice</em> potatoes," etc.'
+label: 'Text Directions'
+description: 'Enter the directions for this recipe in one big blob of text, if you don''t have time. Generally these are a numbered list, starting at 1. and so forth, with each step stating an action the cook should take: "<em>Place</em> the carrots on top of the cake," or "<em>Dice</em> potatoes," etc.'
 required: false
 translatable: false
 default_value: {  }

@@ -1,0 +1,32 @@
+uuid: e19a641d-7605-4d9c-aafd-de3753cb0f73
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.instruction.field_formatted_body
+    - field.field.paragraph.instruction.field_images
+    - paragraphs.paragraphs_type.instruction
+  module:
+    - text
+id: paragraph.instruction.default
+targetEntityType: paragraph
+bundle: instruction
+mode: default
+content:
+  field_formatted_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_images:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: thumbnail
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

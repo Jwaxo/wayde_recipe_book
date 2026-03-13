@@ -1,0 +1,10 @@
+uuid: 721f5188-43ea-4035-bf89-01961e29ba74
+langcode: en
+status: true
+dependencies: {  }
+id: instruction
+label: Instruction
+icon_uuid: null
+icon_default: null
+description: "An <em>instruction</em> is an individual step in a recipe's Directions. It can include an image and description."
+behavior_plugins: {  }

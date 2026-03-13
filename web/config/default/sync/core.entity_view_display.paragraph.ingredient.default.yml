@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.paragraph.ingredient.field_amount
     - field.field.paragraph.ingredient.field_ingredient
+    - field.field.paragraph.ingredient.field_optional
     - paragraphs.paragraphs_type.ingredient
 id: paragraph.ingredient.default
 targetEntityType: paragraph
@@ -26,5 +27,15 @@ content:
       link: false
     third_party_settings: {  }
     weight: 0
+    region: content
+  field_optional:
+    type: boolean
+    label: inline
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 2
     region: content
 hidden: {  }

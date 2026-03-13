@@ -7,13 +7,14 @@ dependencies:
     - field.field.node.recipe.field_directions
     - field.field.node.recipe.field_images
     - field.field.node.recipe.field_ingredients
+    - field.field.node.recipe.field_instructions
     - field.field.node.recipe.field_recipe_type
     - field.field.node.recipe.field_tags
     - node.type.recipe
   module:
     - entity_reference_revisions
     - layout_builder
-    - text
+    - layout_discovery
     - user
 third_party_settings:
   layout_builder:
@@ -106,6 +107,23 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 4
             additional: {  }
+          89c757ea-3586-45d2-9611-65e98aa2e5b2:
+            uuid: 89c757ea-3586-45d2-9611-65e98aa2e5b2
+            region: content
+            configuration:
+              id: 'field_block:node:recipe:field_instructions'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_revisions_entity_view
+                label: above
+                settings:
+                  view_mode: default
+                  link: ''
+                third_party_settings: {  }
+            weight: 8
+            additional: {  }
           80da899d-af9b-49a4-84c5-e6a140b76bbc:
             uuid: 80da899d-af9b-49a4-84c5-e6a140b76bbc
             region: content
@@ -119,19 +137,28 @@ third_party_settings:
                 label: above
                 settings: {  }
                 third_party_settings: {  }
-            weight: 5
+            weight: 7
             additional: {  }
         third_party_settings: {  }
 id: node.recipe.default
 targetEntityType: node
 bundle: recipe
 mode: default
-content: {  }
+content:
+  field_instructions:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
 hidden:
-  links: true
+  body: true
+  field_directions: true
   field_images: true
+  field_ingredients: true
   field_recipe_type: true
   field_tags: true
-  body: true
-  field_ingredients: true
-  field_directions: true
+  links: true

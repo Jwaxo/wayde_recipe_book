@@ -4,6 +4,7 @@ status: true
 dependencies:
   module:
     - editor
+    - linkit
 _core:
   default_config_hash: vpZysv3RHJjhYzq7O_q5q8mVlHdrSzKELmXyiX6RtV0
 name: 'Full HTML'
@@ -49,3 +50,11 @@ filters:
     status: true
     weight: 15
     settings: {  }
+  linkit:
+    id: linkit
+    provider: linkit
+    status: true
+    weight: 0
+    settings:
+      title: true
+      media_substitution: metadata

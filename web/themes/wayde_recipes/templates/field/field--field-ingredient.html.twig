@@ -52,9 +52,15 @@
 {% if label_hidden %}
   {% if multiple %}
     <div{{ attributes.addClass(field_classes) }}>
-      {% for item in items %}
-        <div{{ item.attributes }}>{{ item.content }}</div>
-      {% endfor %}
+      <div{{ items.0.attributes }}>{{ items.0.content }}</div>
+      {% if items.1 %}
+        <div class="ingredient-sub">
+          <div class="ingredient-sub-title">{{ "Substitution"|t }}:</div>
+          {% for item in items|slice(1, length) %}
+            <div{{ item.attributes }}>{{ item.content }}</div>
+          {% endfor %}
+        </div>
+      {% endif %}
     </div>
   {% else %}
     {% for item in items %}
@@ -72,6 +78,14 @@
         <dd{{ item.attributes.addClass('field-value') }}>{{ item.content }}</dd>
       {% endfor %}
       {% if multiple %}
+        {% if items.1 %}
+          <div class="ingredient-sub">
+            <div class="ingredient-sub-title">{{ "Substitution"|t }}:</div>
+            {% for item in items|slice(1, length) %}
+              <div{{ item.attributes }}>{{ item.content }}</div>
+            {% endfor %}
+          </div>
+        {% endif %}
         </div>
       {% endif %}
     </dl>

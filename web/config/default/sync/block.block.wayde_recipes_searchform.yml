@@ -1,4 +1,4 @@
-uuid: 3d3159d2-8516-42f6-803e-63a4b26154fc
+uuid: 16995e97-f479-4c79-9e50-0115bf91c698
 langcode: en
 status: true
 dependencies:
@@ -6,17 +6,15 @@ dependencies:
     - search
   theme:
     - wayde_recipes
-_core:
-  default_config_hash: _nZjxxdypO6xrOAJkCYD81v0L7wh2zbCAVO7_C-UKIc
-id: wayde_recipes_search_form_narrow
+id: wayde_recipes_searchform
 theme: wayde_recipes
-region: primary_menu
-weight: -4
+region: secondary_menu
+weight: 0
 provider: null
 plugin: search_form_block
 settings:
   id: search_form_block
-  label: 'Search form (narrow)'
+  label: 'Search form'
   label_display: '0'
   provider: search
   page_id: null

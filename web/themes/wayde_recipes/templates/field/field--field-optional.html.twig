@@ -49,31 +49,18 @@
   'field--' ~ field_name,
 ]) %}
 
-{% if label_hidden %}
   {% if multiple %}
     <div{{ attributes.addClass(field_classes) }}>
       {% for item in items %}
-        <div{{ item.attributes }}>{{ item.content }}</div>
+        {% if item.content['#markup'] == "On" %}
+          <div{{ item.attributes }}>{{ "Optional"|t }}</div>
+        {% endif %}
       {% endfor %}
     </div>
   {% else %}
     {% for item in items %}
-      <div{{ attributes.addClass(field_classes) }}>{{ item.content }}</div>
+      {% if item.content['#markup'] == "On" %}
+        <div{{ attributes.addClass(field_classes) }}>*{{ "Optional"|t }}</div>
+      {% endif %}
     {% endfor %}
   {% endif %}
-{% else %}
-  <div{{ attributes.addClass(field_classes) }}>
-    <dl>
-      <dt {{ title_attributes.addClass(title_classes) }}>{{ label }}</dt>
-      {% if multiple %}
-        <div class="field-items">
-      {% endif %}
-      {% for item in items %}
-        <dd{{ item.attributes.addClass('field-value') }}>{{ item.content }}</dd>
-      {% endfor %}
-      {% if multiple %}
-        </div>
-      {% endif %}
-    </dl>
-  </div>
-{% endif %}

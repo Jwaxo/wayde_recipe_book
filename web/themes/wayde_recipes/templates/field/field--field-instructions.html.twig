@@ -52,9 +52,11 @@
 {% if label_hidden %}
   {% if multiple %}
     <div{{ attributes.addClass(field_classes) }}>
-      {% for item in items %}
-        <div{{ item.attributes }}>{{ item.content }}</div>
-      {% endfor %}
+      <ol>
+        {% for item in items %}
+          <li{{ item.attributes }}>{{ item.content }}</li>
+        {% endfor %}
+      </ol>
     </div>
   {% else %}
     {% for item in items %}
@@ -63,17 +65,16 @@
   {% endif %}
 {% else %}
   <div{{ attributes.addClass(field_classes) }}>
-    <dl>
-      <dt {{ title_attributes.addClass(title_classes) }}>{{ label }}</dt>
+      <div {{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
       {% if multiple %}
-        <div class="field-items">
+        <ol class="field-items">
       {% endif %}
       {% for item in items %}
-        <dd{{ item.attributes.addClass('field-value') }}>{{ item.content }}</dd>
+        <li{{ item.attributes.addClass('field-value') }}>{{ item.content }}</li>
       {% endfor %}
       {% if multiple %}
-        </div>
+        </ol>
       {% endif %}
-    </dl>
+    </ol>
   </div>
 {% endif %}
